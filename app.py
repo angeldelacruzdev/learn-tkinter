@@ -15,7 +15,7 @@ if os.path.isfile("save.txt"):
         tempApps = f.read()
         tempApps = tempApps.split(',')
         appS = [x for x in tempApps if x.strip()]
-        print(appS)
+         
 
 apps = []
 def addApp():
@@ -55,6 +55,10 @@ openFile.pack()
 runApps = tk.Button(root, text="Run Apps", padx=10,
                     pady=5, fg="white", bg="#e63946", command=runApps)
 runApps.pack()
+
+for app in apps:
+    label = tk.Label(frame, text=app)
+    label.pack()
 
 closeApp = tk.Button(root, text="Close App", padx=10,
                     pady=5, fg="white", bg="red", command=closeApp)
